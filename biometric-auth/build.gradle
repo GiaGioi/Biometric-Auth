@@ -1,10 +1,42 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
-group = 'com.github.GiaGioi'
+
+tasks.withType(Javadoc).all { enabled = false }
+
+ext {
+    bintrayRepo = 'emagbom'
+//    bintrayName = 'ft-mobgame-sdk-as'
+    bintrayName = 'bunder-sdk'
+
+    publishedGroupId = 'com.biometric'
+//    libraryName = 'FeatureSDKAs'
+    libraryName = 'MobGameSDKAS'
+    artifact = 'Biometrics-Authen'
+
+//    libraryDescription = 'mobgame feature sdk use for game top feature'
+    libraryDescription = 'sdk as is sdk platform use for game . It is use Android Studio tool. And upgrade all function, and optimize systems.'
+
+//    siteUrl = 'http://doc.funtap.vn/android/'
+//    gitUrl = 'https://github.com/Mobgame/android-sdk.git'
+
+    siteUrl = 'http://doc.funtap.vn/android/'
+    gitUrl = ''
+
+//    libraryVersion = 'FT.2.4.3.AS'
+    libraryVersion = '1.0.0'
+
+    developerId = 'khaitq7'
+    developerName = 'Max Tran'
+    developerEmail = 'max@mobgame.vn'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
 android {
     compileSdkVersion 28
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -26,3 +58,5 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.1.0-alpha3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha3'
 }
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
