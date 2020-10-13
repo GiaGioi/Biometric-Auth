@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
-group = 'com.github.your_github_name'
+group = 'com.github.GiaGioi'
 android {
     compileSdkVersion 28
     defaultConfig {
